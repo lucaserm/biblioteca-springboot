@@ -1,11 +1,11 @@
-package main.java.com.fourcatsdev.aula20.component;
+package main.java.com.openlab.biblioteca.component;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import main.java.com.fourcatsdev.aula20.modelo.Papel;
-import main.java.com.fourcatsdev.aula20.repository.PapelRepository;
+import main.java.com.openlab.biblioteca.modelo.Papel;
+import main.java.com.openlab.biblioteca.repository.PapelRepository;
 
 @Component
 public class CarregadoraDados implements CommandLineRunner {

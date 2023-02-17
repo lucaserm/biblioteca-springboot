@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.controller;
+package main.java.com.openlab.biblioteca.controller;
 
 import java.util.List;
 import java.util.Locale;
@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import main.java.com.fourcatsdev.aula20.modelo.Papel;
-import main.java.com.fourcatsdev.aula20.modelo.Usuario;
-import main.java.com.fourcatsdev.aula20.service.I18nService;
-import main.java.com.fourcatsdev.aula20.service.PapelService;
-import main.java.com.fourcatsdev.aula20.service.UsuarioService;
+import main.java.com.openlab.biblioteca.modelo.Papel;
+import main.java.com.openlab.biblioteca.modelo.Usuario;
+import main.java.com.openlab.biblioteca.service.I18nService;
+import main.java.com.openlab.biblioteca.service.PapelService;
+import main.java.com.openlab.biblioteca.service.UsuarioService;
 
 @Controller
 @RequestMapping("/usuario")

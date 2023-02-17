@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.security;
+package main.java.com.openlab.biblioteca.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import main.java.com.fourcatsdev.aula20.repository.UsuarioRepository;
+import main.java.com.openlab.biblioteca.repository.UsuarioRepository;
 
 @Configuration
 @EnableWebSecurity

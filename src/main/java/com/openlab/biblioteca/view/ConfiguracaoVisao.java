@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.view;
+package main.java.com.openlab.biblioteca.view;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

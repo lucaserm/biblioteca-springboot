@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.controller;
+package main.java.com.openlab.biblioteca.controller;
 
 import java.util.Locale;
 
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import main.java.com.fourcatsdev.aula20.service.I18nService;
+import main.java.com.openlab.biblioteca.service.I18nService;
 
 @Controller
 public class HomeController {

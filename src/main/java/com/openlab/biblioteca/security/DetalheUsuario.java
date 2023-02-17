@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.security;
+package main.java.com.openlab.biblioteca.security;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,8 +8,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import main.java.com.fourcatsdev.aula20.modelo.Papel;
-import main.java.com.fourcatsdev.aula20.modelo.Usuario;
+import main.java.com.openlab.biblioteca.modelo.Papel;
+import main.java.com.openlab.biblioteca.modelo.Usuario;
 
 public class DetalheUsuario implements UserDetails {
 	

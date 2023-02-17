@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.service;
+package main.java.com.openlab.biblioteca.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import main.java.com.fourcatsdev.aula20.modelo.Papel;
-import main.java.com.fourcatsdev.aula20.repository.PapelRepository;
+import main.java.com.openlab.biblioteca.modelo.Papel;
+import main.java.com.openlab.biblioteca.repository.PapelRepository;
 
 @Service
 public class PapelServiceImpl implements PapelService {

@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.service;
+package main.java.com.openlab.biblioteca.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import main.java.com.fourcatsdev.aula20.modelo.Papel;
-import main.java.com.fourcatsdev.aula20.modelo.Usuario;
-import main.java.com.fourcatsdev.aula20.repository.UsuarioRepository;
+import main.java.com.openlab.biblioteca.modelo.Papel;
+import main.java.com.openlab.biblioteca.modelo.Usuario;
+import main.java.com.openlab.biblioteca.repository.UsuarioRepository;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {

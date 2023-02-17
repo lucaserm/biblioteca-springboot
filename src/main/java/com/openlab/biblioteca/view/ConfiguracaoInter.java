@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.view;
+package main.java.com.openlab.biblioteca.view;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

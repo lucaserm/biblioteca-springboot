@@ -1,8 +1,8 @@
-package main.java.com.fourcatsdev.aula20.service;
+package main.java.com.openlab.biblioteca.service;
 
 import java.util.List;
 
-import main.java.com.fourcatsdev.aula20.modelo.Usuario;
+import main.java.com.openlab.biblioteca.modelo.Usuario;
 
 public interface UsuarioService {
 

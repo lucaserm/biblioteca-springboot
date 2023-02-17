@@ -1,4 +1,4 @@
-package main.java.com.fourcatsdev.aula20.modelo;
+package main.java.com.openlab.biblioteca.modelo;
 
 import java.util.List;
 
