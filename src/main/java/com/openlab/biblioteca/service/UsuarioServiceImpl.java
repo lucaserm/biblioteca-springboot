@@ -1,4 +1,4 @@
-package main.java.com.openlab.biblioteca.service;
+package com.openlab.biblioteca.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,26 +8,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import main.java.com.openlab.biblioteca.modelo.Papel;
-import main.java.com.openlab.biblioteca.modelo.Usuario;
-import main.java.com.openlab.biblioteca.repository.UsuarioRepository;
+import com.openlab.biblioteca.modelo.Papel;
+import com.openlab.biblioteca.modelo.Usuario;
+import com.openlab.biblioteca.repository.UsuarioRepository;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
 
 	@Autowired
 	private UsuarioRepository usuarioRepository;
-	
+
 	@Autowired
 	private PapelService papelService;
-	
+
 	@Autowired
 	private BCryptPasswordEncoder criptografia;
-	
+
 	@Override
 	public void atribuirPapelParaUsuario(long idUsuario, int[] idsPapeis, boolean isAtivo) {
-		
-		List<Papel> papeis = new ArrayList<Papel>();			 
+
+		List<Papel> papeis = new ArrayList<Papel>();
 		for (int i = 0; i < idsPapeis.length; i++) {
 			long idPapel = idsPapeis[i];
 			Papel papel = papelService.buscarPapelPorId(idPapel);
@@ -50,27 +50,27 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public Usuario gravarUsuario(Usuario usuario) {		
-		//Busca o papel básico de usuário
+	public Usuario gravarUsuario(Usuario usuario) {
+		// Busca o papel básico de usuário
 		Papel papel = papelService.buscarPapel("USER");
 		List<Papel> papeis = new ArrayList<Papel>();
-		papeis.add(papel);				
+		papeis.add(papel);
 		usuario.setPapeis(papeis); // associa o papel de USER ao usuário
-				
+
 		String senhaCriptografia = criptografia.encode(usuario.getPassword());
 		usuario.setPassword(senhaCriptografia);
-				
+
 		return usuarioRepository.save(usuario);
 	}
 
 	@Override
 	public void apagarUsuarioPorId(Long id) {
 		Usuario usuario = buscarUsuarioPorId(id);
-		usuarioRepository.delete(usuario);		
+		usuarioRepository.delete(usuario);
 	}
 
 	@Override
-	public List<Usuario> listarUsuario() {		
+	public List<Usuario> listarUsuario() {
 		List<Usuario> usuarios = usuarioRepository.findAll();
 		return usuarios;
 	}
@@ -83,7 +83,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public void alterarUsuario(Usuario usuario) {
-		usuarioRepository.save(usuario);		
+		usuarioRepository.save(usuario);
 	}
 
 }

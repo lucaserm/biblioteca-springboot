@@ -1,4 +1,4 @@
-package main.java.com.openlab.biblioteca.security;
+package com.openlab.biblioteca.security;
 
 import java.io.IOException;
 
@@ -12,13 +12,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class LoginSucesso extends SavedRequestAwareAuthenticationSuccessHandler {
-	
-	@Override
+
+    @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
             Authentication authentication) throws ServletException, IOException {
 
-		String redirectURL = "/usuario/index";
-        response.sendRedirect(redirectURL);        
+        String redirectURL = "/usuario/index";
+        response.sendRedirect(redirectURL);
     }
-	
+
 }

@@ -1,4 +1,4 @@
-package main.java.com.openlab.biblioteca.service;
+package com.openlab.biblioteca.service;
 
 import java.util.Locale;
 
@@ -11,7 +11,7 @@ public class I18nService {
 
 	@Autowired
 	private MessageSource message; // internacionalização
-	
+
 	public String buscarMensagem(String chave, Locale locale) {
 		String msn = message.getMessage(chave, null, locale);
 		return msn;

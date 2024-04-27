@@ -1,4 +1,4 @@
-package main.java.com.openlab.biblioteca.modelo;
+package com.openlab.biblioteca.modelo;
 
 import java.util.List;
 
@@ -11,17 +11,18 @@ import javax.persistence.ManyToMany;
 
 @Entity
 public class Papel {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private String papel;
-	
+
 	@ManyToMany(mappedBy = "papeis", fetch = FetchType.EAGER)
 	private List<Usuario> usuarios;
-	
-	public Papel() {}
+
+	public Papel() {
+	}
 
 	public Papel(String papel) {
 		super();
@@ -51,6 +52,5 @@ public class Papel {
 	public void setUsuarios(List<Usuario> usuarios) {
 		this.usuarios = usuarios;
 	}
-	
-	
+
 }

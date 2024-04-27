@@ -1,4 +1,4 @@
-package main.java.com.openlab.biblioteca.security;
+package com.openlab.biblioteca.security;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,12 +8,12 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import main.java.com.openlab.biblioteca.modelo.Papel;
-import main.java.com.openlab.biblioteca.modelo.Usuario;
+import com.openlab.biblioteca.modelo.Papel;
+import com.openlab.biblioteca.modelo.Usuario;
 
 public class DetalheUsuario implements UserDetails {
-	
-	private Usuario usuario;	
+
+	private Usuario usuario;
 
 	public DetalheUsuario(Usuario usuario) {
 		super();
@@ -24,11 +24,11 @@ public class DetalheUsuario implements UserDetails {
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		List<Papel> papeis = usuario.getPapeis();
 		List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-		
-		for(Papel papel: papeis) {
+
+		for (Papel papel : papeis) {
 			SimpleGrantedAuthority sga = new SimpleGrantedAuthority(papel.getPapel());
 			authorities.add(sga);
-		}	
+		}
 		return authorities;
 	}
 
@@ -67,7 +67,7 @@ public class DetalheUsuario implements UserDetails {
 		// TODO Auto-generated method stub
 		return usuario.isAtivo();
 	}
-	
+
 	public String getNome() {
 		return usuario.getNome();
 	}

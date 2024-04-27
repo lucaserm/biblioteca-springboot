@@ -1,13 +1,13 @@
-package main.java.com.openlab.biblioteca;
+package com.openlab.biblioteca;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Aula20Application {
+public class BibliotecaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Aula20Application.class, args);
+		SpringApplication.run(BibliotecaApplication.class, args);
 	}
 
 }

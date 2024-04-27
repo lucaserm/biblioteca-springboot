@@ -1,4 +1,4 @@
-package main.java.com.openlab.biblioteca.view;
+package com.openlab.biblioteca.view;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,27 +14,25 @@ import org.springframework.web.servlet.i18n.*;
 
 @Configuration
 public class ConfiguracaoInter implements WebMvcConfigurer {
-	@Bean
-    public MessageSource messageSource() { 
-        ReloadableResourceBundleMessageSource messageSource = 
-			new ReloadableResourceBundleMessageSource(); 
+    @Bean
+    public MessageSource messageSource() {
+        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("classpath:message");
         return messageSource;
     }
 
     @Bean
-    public LocaleResolver localeResolver() { 
-        CookieLocaleResolver clr = new CookieLocaleResolver(); 
-        clr.setDefaultLocale(Locale.US); 
+    public LocaleResolver localeResolver() {
+        CookieLocaleResolver clr = new CookieLocaleResolver();
+        clr.setDefaultLocale(Locale.US);
         return clr;
-	}
-
+    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor(); 
-        interceptor.setParamName("locale"); 
-        registry.addInterceptor(interceptor); 
+        LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
+        interceptor.setParamName("locale");
+        registry.addInterceptor(interceptor);
     }
-	
+
 }

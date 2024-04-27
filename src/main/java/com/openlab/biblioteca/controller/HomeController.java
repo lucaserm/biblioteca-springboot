@@ -1,4 +1,4 @@
-package main.java.com.openlab.biblioteca.controller;
+package com.openlab.biblioteca.controller;
 
 import java.util.Locale;
 
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import main.java.com.openlab.biblioteca.service.I18nService;
+import com.openlab.biblioteca.service.I18nService;
 
 @Controller
 public class HomeController {
