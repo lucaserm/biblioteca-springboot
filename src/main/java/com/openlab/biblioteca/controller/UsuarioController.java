@@ -148,4 +148,9 @@ public class UsuarioController {
 		}
 		return "redirect:/usuario/admin/listar";
 	}
+
+	@GetMapping("/emprestimos")
+	public String emprestimo() {
+		return "/auth/user/user-emprestimos";
+	}
 }
